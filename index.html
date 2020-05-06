@@ -12,34 +12,233 @@
     <title>Hello, world!</title>
   </head>
   <body>
-     
-     <div class="container ">
-        <div id="carouselExampleIndicators" class="carousel slide d-none d-lg-block  " data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner ">
-    <div class="carousel-item active bg-dark d-flex justify-content-center">
-      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420">
-    </div>
-    <div class="carousel-item bg-dark d-flex justify-content-center">
-      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420">
-    </div>
-    <div class="carousel-item bg-dark d-flex justify-content-center">
-      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420">
-    </div>
+
+  	 <div class="container">
+  	 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-collapse">
+        <div class="col-lg-7 d-lg-block d-sm-none">
+          <a class="navbar-brand col-lg-5" href="#">Tel:1337150666</a>
+          <a class="navbar-brand col-lg-6" href="#">Welcome to our store</a>
+        </div>
+        <form class="col-lg-5">
+          <div class="form-row align-items-center">
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>AM</option>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>$</option>
+                <option value="RU">&euro;</option>
+                <option value="DR">֏</option>
+              </select>
+            </div>
+            <div class="col-lg-4 m-auto d-lg-block d-sm-none">
+              <button type="button" class="btn btn-info col-lg-12">
+                Wishlist <span class="badge badge-dark bg-danger">9</span>
+              </button>  
+            </div>          
+          </div>
+        </form>         
+      </div>
+     </nav>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-collapse d-sm-flex">
+        <div class="col-lg-6 col-sm-9">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLpXjY9XCfSyqUpAK1Ps-OYtQv3h347j8PXht57f9no-WWJqfK&usqp=CAU" alt="" width="50px">
+
+  </a></nav>
+        </div>
+        <div class="col-lg-6 col-sm-3 d-lg-flex justify-content-around">
+          <div class="">
+            <form class="form-inline my-2 my-lg-0 d-lg-inline-block d-sm-none">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              My account
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+              <a class="dropdown-item" href="#">My Orders</a>
+              <a class="dropdown-item" href="#">Account Settings</a>
+            </div>
+          </div>  
+        </div>      
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 d-flex justify-content-between">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="products.html">TV categories</a>
+          <a class="dropdown-item" href="#">Spekers</a>
+          <a class="dropdown-item" href="#">TV accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mobile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Phone</a>
+          <a class="dropdown-item" href="#">Phone accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Gaming Consoles
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">PS4</a>
+          <a class="dropdown-item" href="#">XBOX</a>
+          <a class="dropdown-item" href="#">Nintendo switch</a>
+        </div>
+      </li>
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Audio
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Microphones</a>
+          <a class="dropdown-item" href="#">Audio for video</a>
+          <a class="dropdown-item" href="#">Studio recording</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Video
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">360 cameras</a>
+          <a class="dropdown-item" href="#">waterproof cameras</a>
+          <a class="dropdown-item" href="#">ection cameras</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Computers
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="products.html">laptops</a>
+          <a class="dropdown-item" href="#">gaming</a>
+          <a class="dropdown-item" href="#">for home</a>
+        </div>
+      </li> 
+    </ul>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+</nav>
+  	 </div>
+
+<div class="row justify-content-center">
+        <div class="col-12 col-md-10 mt-2">
+            <div class="alert alert-danger" role="alert" id="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                This site using you cookies
+            </div>
+        </div>
+    </div>
+     
+     <div class="container">
+     	<div id="homeCarousel" class="carousel bg-dark pb-5 pt-2 d-none d-lg-block" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#homeCarousel" data-slide-to="0" class=""></li>
+                    <li data-target="#homeCarousel" data-slide-to="1" class=""></li>
+                    <li data-target="#homeCarousel" data-slide-to="2" class=""></li>
+                    <li data-target="#homeCarousel" data-slide-to="3" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-4">
+                                <div class="carousel-caption text-left">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p>Apple new production.</p>
+                                    <a href="#" class="btn btn-primary" role="button">Add to cart</a>
+                                    <a href="products.html" class="btn btn-primary" role="button">View item</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <div class="carousel-caption text-right">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p>Apple new production.</p>
+                                    <a href="#" class="btn btn-primary" role="button">Add to cart</a>
+                                    <a href="products.html" class="btn btn-primary" role="button">View item</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="col-4">
+                                <div class="carousel-caption text-left">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p>Apple new production.</p>
+                                    <a href="products.html" class="btn btn-primary" role="button">View item</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <div class="carousel-caption text-right">
+                                    <h5>Iphone 11 pro</h5>
+                                    <p>Apple new production.</p>
+                                    <a href="#" class="btn btn-primary" role="button">Add to cart</a>
+                                    <a href="products.html" class="btn btn-primary" role="button">View item</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-11-pro-max-silver-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566953858420" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
      </div>
 
      <div class="container bg-warning">
@@ -53,7 +252,7 @@
            <div class="card" >
   <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP72_VW_PF+watch-40-alum-silver-nc-5s_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1566449863593,1567125904712" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5>Apple watch</h5>
+    <h5 class="d-flex justify-content-center">Apple watch</h5>
     <h6 class="aaa d-flex justify-content-center text-danger">350$</h6>
     <h4 class="d-flex justify-content-center text-success">300$</h4>
     <button class="btn button d-flex justify-content-center text-white bg-warning mx-auto">Add to cart</button>
@@ -64,7 +263,7 @@
            <div class="card" >
   <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP72_VW_PF+watch-40-alum-silver-nc-5s_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1566449863593,1567125904712" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5>Apple watch</h5>
+    <h5 class=" d-flex justify-content-center">Apple watch</h5>
     <h6 class="aaa d-flex justify-content-center text-danger">350$</h6>
     <h4 class="d-flex justify-content-center text-success">300$</h4>
     <button class="btn button d-flex justify-content-center text-white bg-warning mx-auto">Add to cart</button>
@@ -75,7 +274,7 @@
            <div class="card">
   <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP72_VW_PF+watch-40-alum-silver-nc-5s_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1566449863593,1567125904712" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5>Apple watch</h5>
+    <h5 class="d-flex justify-content-center">Apple watch</h5>
     <h6 class="aaa d-flex justify-content-center text-danger">350$</h6>
     <h4 class="d-flex justify-content-center text-success">300$</h4>
     <button class="btn button d-flex justify-content-center text-white bg-warning mx-auto">Add to cart</button>
@@ -86,7 +285,7 @@
            <div class="card" >
   <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP72_VW_PF+watch-40-alum-silver-nc-5s_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1566449863593,1567125904712" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5>Apple watch</h5>
+    <h5 class=" d-flex justify-content-center">Apple watch</h5>
     <h6 class="aaa d-flex justify-content-center text-danger">350$</h6>
     <h4 class="d-flex justify-content-center text-success">300$</h4>
     <button class="btn button d-flex justify-content-center text-white bg-warning mx-auto">Add to cart</button>
@@ -97,7 +296,7 @@
            <div class="card" >
   <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTP72_VW_PF+watch-40-alum-silver-nc-5s_VW_PF_WF_SI?wid=2000&hei=2000&fmt=png-alpha&.v=1566449863593,1567125904712" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5>Apple watch</h5>
+    <h5 class="d-flex justify-content-center">Apple watch</h5>
     <h6 class="aaa d-flex justify-content-center text-danger">350$</h6>
     <h4 class="d-flex justify-content-center text-success">300$</h4>
     <button class="btn button d-flex justify-content-center text-white bg-warning mx-auto">Add to cart</button>
@@ -121,7 +320,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="mx-auto d-flex justify-content-center btn btn-outline-primary">Category</button>
   </div>
 </div>
        </div>
@@ -129,7 +328,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -137,7 +336,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -145,7 +344,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -153,7 +352,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -161,7 +360,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto ">Category</button>
   </div>
 </div>
        </div>
@@ -174,7 +373,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -182,7 +381,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto ">Category</button>
   </div>
 </div>
        </div>
@@ -190,7 +389,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -198,7 +397,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -206,7 +405,7 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
@@ -214,13 +413,164 @@
          <div class="card" >
   <img src="https://data.ibtimes.sg/en/full/29044/apple-ipad-pro.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <button type="button" class="btn btn-outline-primary ml-3">Category</button>
+    <button type="button" class="d-flex justify-content-center btn btn-outline-primary mx-auto">Category</button>
   </div>
 </div>
        </div>
      </div>
 
+
      </div>
+     <div class="container">
+       <div class="row justify-content-center pb-4">
+        <h5 class="col-12 display-4 text-center mb-3">New Arrivals</h5>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img  src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img  src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img  src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img  src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <div class="card col-md-2 col-12 text-center p-2">
+            <img  src="apple.jpg" alt="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Product 1</h5>
+                <h5 class="text-danger">$ 122.99 <br><del class="text-info">$ 200</del></h5>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+        <nav class="col mt-2">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+     </div>
+
+     <div class="container main-footer">
+    <div class="row">
+        <div class="col-12 p-0">
+            <ul class="list-group list-group-horizontal-md w-100 justify-content-around text-uppercase font-weight-bold">
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Contact Us</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Live Chat</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Shipping</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Term &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-none d-md-flex row justify-content-around">
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 3</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 4</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 5</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row align-items-center h-100 bg-dark">
+        <div class="col-auto flex-grow-0 py-3 d-none d-md-block text-danger">
+            <span>find us on: </span>
+        </div>
+        <div class="col-12 col-md-auto text-center mr-auto">
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+        </div>
+        <div class="col-12 col-md-auto text-center text-danger">
+            ©Tumo Center For Creative Technologies
+        </div>
+    </div>
+</div>
 
 
 
