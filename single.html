@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--  Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <!-- FontAwesome JS -->
+    <script src="https://kit.fontawesome.com/2f158531bd.js" crossorigin="anonymous"></script><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet"><link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <!-- css.gg -->
+    <link href="https://css.gg/css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Online Shop</title>
+<link rel="prefetch"></head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-collapse">
+        <div class="col-lg-7 d-lg-block d-sm-none">
+          <a class="navbar-brand col-lg-5" href="#">Tel:1337150666</a>
+          <a class="navbar-brand col-lg-6" href="#">Welcome to our store</a>
+        </div>
+        <form class="col-lg-5">
+          <div class="form-row align-items-center">
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>AM</option>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>$</option>
+                <option value="RU">&euro;</option>
+                <option value="DR">֏</option>
+              </select>
+            </div>
+            <div class="col-lg-4 m-auto d-lg-block d-sm-none">
+              <button type="button" class="btn btn-info col-lg-12">
+                Wishlist <span class="badge badge-dark bg-danger">9</span>
+              </button>  
+            </div>          
+          </div>
+        </form>         
+      </div>
+     </nav>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-collapse d-sm-flex">
+        <div class="col-lg-6 col-sm-9">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLpXjY9XCfSyqUpAK1Ps-OYtQv3h347j8PXht57f9no-WWJqfK&usqp=CAU" alt="" width="50px">
+
+  </a></nav>
+        </div>
+        <div class="col-lg-6 col-sm-3 d-lg-flex justify-content-around">
+          <div class="">
+            <form class="form-inline my-2 my-lg-0 d-lg-inline-block d-sm-none">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              My account
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+              <a class="dropdown-item" href="#">My Orders</a>
+              <a class="dropdown-item" href="#">Account Settings</a>
+            </div>
+          </div>  
+        </div>      
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 d-flex justify-content-between">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="products.html">TV categories</a>
+          <a class="dropdown-item" href="#">Spekers</a>
+          <a class="dropdown-item" href="#">TV accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mobile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Phone</a>
+          <a class="dropdown-item" href="#">Phone accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Gaming Consoles
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">PS4</a>
+          <a class="dropdown-item" href="#">XBOX</a>
+          <a class="dropdown-item" href="#">Nintendo switch</a>
+        </div>
+      </li>
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Audio
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Microphones</a>
+          <a class="dropdown-item" href="#">Audio for video</a>
+          <a class="dropdown-item" href="#">Studio recording</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Video
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">360 cameras</a>
+          <a class="dropdown-item" href="#">waterproof cameras</a>
+          <a class="dropdown-item" href="#">ection cameras</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Computers
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="products.html">laptops</a>
+          <a class="dropdown-item" href="#">gaming</a>
+          <a class="dropdown-item" href="#">for home</a>
+        </div>
+      </li> 
+    </ul>
+  </div>
+</nav>
+     </div> 
+    <div class="container">
+        <nav aria-label="breadcrumb" class="row">
+            <ol class="breadcrumb mt-3 col mr-auto">
+                <li class="breadcrumb-item"><a href="shop.html">Laptops</a></li>
+                <li class="breadcrumb-item"><a href="shop.html">light</a></li>
+                <li class="breadcrumb-item"><a href="shop.html">Mac Book</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mac Book pro 2020</li>
+            </ol>
+            <form action="" class="form-inline col-12 col-md-auto mb-2 mb-md-0">
+                <label for="sortBy" class="mr-2">Sort By</label>
+                <select class="custom-select" id="sortBy">
+                    <option value="1">Price: Low to High</option>
+                    <option value="2">Price: High to Low</option>
+                    <option value="3">Rating</option>
+                </select>
+            </form>
+        </nav>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-primary font-weight-bold">Mac Book pro 2020</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-3">
+                        <a class="border d-inline-block m-1 p-1" data-fancybox="gallery" href="mac2.jpg"><img class="img-fluid" src="mac2.jpg"></a>
+                        <a class="border d-inline-block m-1 p-1" data-fancybox="gallery" href="mac4.jpg"><img class="img-fluid" src="mac4.jpg"></a>
+                        <a class="border d-inline-block m-1 p-1" data-fancybox="gallery" href="mac3.jpg"><img class="img-fluid" src="mac3.jpg"></a>
+                        <a class="border d-inline-block m-1 p-1" data-fancybox="gallery" href="mac5.png"><img class="img-fluid" src="mac5.png"></a>
+                    </div>
+                    <div class="col">
+                        <a class="" data-fancybox="gallery" href="mac1.jpg"><img class="img-fluid" src="mac1.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="font-weight-bold">$2000</h3>
+                    </div>
+                </div>
+                <form class="w-100 row" action="">
+                    <div class="col-12 col-md-5">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Quantity</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="1">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input class="btn btn-primary" type="submit" value="Add To Cart">
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="font-weight-bold my-2">Options</p>
+                    </div>
+                    <div class="col-12">
+                        <form action="">
+                            <div class="custom-control custom-switch custom-control-inline">
+                                <input type="checkbox" id="mouse" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="mouse">Mouse</label>
+                            </div>
+                            <div class="custom-control custom-switch custom-control-inline">
+                                <input type="checkbox" id="earphone" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="earphone">Earphones</label>
+                            </div>
+                            <div class="custom-control custom-switch  custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="case" checked="">
+                                <label class="custom-control-label" for="case">Case</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="font-weight-bold my-2">Color</p>
+                    </div>
+                    <div class="col-12">
+                        <form action="">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="black" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="black">Black</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="silver" name="customRadioInline1" class="custom-control-input" checked="">
+                                <label class="custom-control-label" for="silver">Silver</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="accordion w-100" id="accordionExample">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" id="headingOne">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Overview</a>
+                    </li>
+                    <li class="nav-item" id="headingTwo">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Rating</a>
+                    </li>
+                    <li class="nav-item" id="headingThree">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Link</a>
+                    </li>
+                </ul>
+                <div class="card">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p class="font-weight-bold">Key Features</p>
+                            <ul>
+                                <li>2.2 GHz Intel Core i3-8130U Dual-Core</li>
+                                <li>8GB DDR4 | 128GB SSD</li>
+                                <li>15.6" 1920 x 1080 FHD Touchscreen</li>
+                                <li>Integrated Intel UHD Graphics 620</li>
+                            </ul>
+                            Designed to entertain the entire family, the 15.6" Inspiron 15 5000 Series 5570 Laptop from Dell
+                            is powered by a 2.2 GHz Intel Core i3-8130U dual-core processor that allows you to run multiple
+                            applications simultaneously. The processor also features a boost speed of up to 3.4 GHz and the
+                            system's 8GB of 2400 MHz DDR4 RAM, which may be upgraded to
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <span class="w-25">Productivity</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Performance</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Durability</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Battery Life</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="w-25">Shipping</span>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     <div class="container main-footer">
+    <div class="row">
+        <div class="col-12 p-0">
+            <ul class="list-group list-group-horizontal-md w-100 justify-content-around text-uppercase font-weight-bold">
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Contact Us</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Live Chat</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Shipping</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Term &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-none d-md-flex row justify-content-around">
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 3</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 4</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 5</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row align-items-center h-100 bg-dark">
+        <div class="col-auto flex-grow-0 py-3 d-none d-md-block text-danger">
+            <span>find us on: </span>
+        </div>
+        <div class="col-12 col-md-auto text-center mr-auto">
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+            <a href="#" class="align-middle p-2 d-inline-block text-danger"><img src=""></a>
+        </div>
+        <div class="col-12 col-md-auto text-center text-danger">
+            ©Tumo Center For Creative Technologies
+        </div>
+    </div>
+</div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--  Fancybox JS  -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!--  custom JS  -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
