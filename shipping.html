@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online shop</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        html {
+            height: 100%
+        }
+        
+        #grad1 {
+            background-color: : #9C27B0;
+        }
+        
+        #msform {
+            text-align: center;
+            position: relative;
+            margin-top: 20px
+        }
+        
+        #msform fieldset .form-card {
+            background: white;
+            border: 0 none;
+            border-radius: 0px;
+            padding: 20px 40px 30px 40px;
+            box-sizing: border-box;
+            width: 94%;
+            margin: 0 3% 20px 3%;
+            position: relative
+        }
+        
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            padding-bottom: 20px;
+            position: relative
+        }
+        
+        #msform fieldset:not(:first-of-type) {
+            display: none
+        }
+        
+        #msform fieldset .form-card {
+            text-align: left;
+            color: #9E9E9E
+        }
+        
+        #msform input,
+        #msform textarea {
+            padding: 0px 8px 4px 8px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 25px;
+            margin-top: 2px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: #2C3E50;
+            font-size: 16px;
+            letter-spacing: 1px
+        }
+        
+        #msform input:focus,
+        #msform textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: none;
+            font-weight: bold;
+            border-bottom: 2px solid skyblue;
+            outline-width: 0
+        }
+        
+        #msform .action-button {
+            width: 100px;
+            background: skyblue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 0px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px
+        }
+        
+        #msform .action-button:hover,
+        #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+        }
+        
+        #msform .action-button-previous {
+            width: 100px;
+            background: #616161;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 0px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px
+        }
+        
+        #msform .action-button-previous:hover,
+        #msform .action-button-previous:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+        }
+        
+        select.list-dt {
+            border: none;
+            outline: 0;
+            border-bottom: 1px solid #ccc;
+            padding: 2px 5px 3px 5px;
+            margin: 2px
+        }
+        
+        select.list-dt:focus {
+            border-bottom: 2px solid skyblue
+        }
+        
+        .card {
+            z-index: 0;
+            border: none;
+            border-radius: 0.5rem;
+            position: relative
+        }
+        
+        .fs-title {
+            font-size: 25px;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: left
+        }
+        
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            color: lightgrey
+        }
+        
+        #progressbar .active {
+            color: #000000
+        }
+        
+        #progressbar li {
+            list-style-type: none;
+            font-size: 12px;
+            width: 25%;
+            float: left;
+            position: relative
+        }
+        
+        #progressbar #account:before {
+            font-family: FontAwesome;
+            content: "\f041"
+        }
+        
+        #progressbar #personal:before {
+            font-family: FontAwesome;
+            content: "\f09d"
+        }
+        
+        #progressbar #payment:before {
+            font-family: FontAwesome;
+            content: "\f002"
+        }
+        
+        #progressbar #confirm:before {
+            font-family: FontAwesome;
+            content: "\f00c"
+        }
+        
+        #progressbar li:before {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            display: block;
+            font-size: 18px;
+            color: #ffffff;
+            background: lightgray;
+            border-radius: 50%;
+            margin: 0 auto 10px auto;
+            padding: 2px
+        }
+        
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: lightgray;
+            position: absolute;
+            left: 0;
+            top: 25px;
+            z-index: -1
+        }
+        
+        #progressbar li.active:before,
+        #progressbar li.active:after {
+            background: #ffc007;
+        }
+        
+        .radio-group {
+            position: relative;
+            margin-bottom: 25px
+        }
+        
+        .radio {
+            display: inline-block;
+            width: 204;
+            height: 104;
+            border-radius: 0;
+            background: lightblue;
+            box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 8px 2px
+        }
+        
+        .radio:hover {
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3)
+        }
+        
+        .radio.selected {
+            box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1)
+        }
+        
+        .fit-image {
+            width: 100%;
+            object-fit: cover
+        }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var opacity;
+        
+        $(".next").click(function(){
+        
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        
+        //Add Class Active
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+        
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+        step: function(now) {
+        // for making fielset appear animation
+        opacity = 1 - now;
+        
+        current_fs.css({
+        'display': 'none',
+        'position': 'relative'
+        });
+        next_fs.css({'opacity': opacity});
+        },
+        duration: 600
+        });
+        });
+        
+        $(".previous").click(function(){
+        
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        
+        //Remove class active
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+        
+        //show the previous fieldset
+        previous_fs.show();
+        
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+        step: function(now) {
+        // for making fielset appear animation
+        opacity = 1 - now;
+        
+        current_fs.css({
+        'display': 'none',
+        'position': 'relative'
+        });
+        previous_fs.css({'opacity': opacity});
+        },
+        duration: 600
+        });
+        });
+        
+        $('.radio-group .radio').click(function(){
+        $(this).parent().find('.radio').removeClass('selected');
+        $(this).addClass('selected');
+        });
+        
+        $(".submit").click(function(){
+        return false;
+        })
+        
+        });
+    </script>
+<link rel="prefetch">
+</head>
+<body>
+	 <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-collapse">
+        <div class="col-lg-7 d-lg-block d-sm-none">
+          <a class="navbar-brand col-lg-5" href="#">Tel:1337150666</a>
+          <a class="navbar-brand col-lg-6" href="#">Welcome to our store</a>
+        </div>
+        <form class="col-lg-5">
+          <div class="form-row align-items-center">
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>AM</option>
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
+            <div class="col-lg-4 col-sm-6 my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>$</option>
+                <option value="RU">&euro;</option>
+                <option value="DR">֏</option>
+              </select>
+            </div>
+            <div class="col-lg-4 m-auto d-lg-block d-sm-none">
+              <button type="button" class="btn btn-info col-lg-12">
+                Wishlist <span class="badge badge-dark bg-danger">9</span>
+              </button>  
+            </div>          
+          </div>
+        </form>         
+      </div>
+     </nav>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-collapse d-sm-flex">
+        <div class="col-lg-6 col-sm-9">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <a class="navbar-brand" href="index.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLpXjY9XCfSyqUpAK1Ps-OYtQv3h347j8PXht57f9no-WWJqfK&usqp=CAU" alt="" width="50px">
+
+  </a></nav>
+        </div>
+        <div class="col-lg-6 col-sm-3 d-lg-flex justify-content-around">
+          <div class="">
+            <form class="form-inline my-2 my-lg-0 d-lg-inline-block d-sm-none">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              My account
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+              <a class="dropdown-item" href="#">My Orders</a>
+              <a class="dropdown-item" href="#">Account Settings</a>
+            </div>
+          </div>  
+        </div>      
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100 d-flex justify-content-between">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TV
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">TV categories</a>
+          <a class="dropdown-item" href="#">Spekers</a>
+          <a class="dropdown-item" href="#">TV accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mobile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Phone</a>
+          <a class="dropdown-item" href="#">Phone accessory</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       Gaming Consoles
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">PS4</a>
+          <a class="dropdown-item" href="#">XBOX</a>
+          <a class="dropdown-item" href="#">Nintendo switch</a>
+        </div>
+      </li>
+      
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Audio
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Microphones</a>
+          <a class="dropdown-item" href="#">Audio for video</a>
+          <a class="dropdown-item" href="#">Studio recording</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Video
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">360 cameras</a>
+          <a class="dropdown-item" href="#">waterproof cameras</a>
+          <a class="dropdown-item" href="#">ection cameras</a>
+        </div>
+      </li> 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Computers
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="products.html">laptops</a>
+          <a class="dropdown-item" href="#">gaming</a>
+          <a class="dropdown-item" href="#">for home</a>
+        </div>
+      </li> 
+    </ul>
+  </div>
+</nav>
+
+<main>
+      	<div class="" id="grad1">
+        <div class="row mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3 ">
+                    <h2><strong>Shipping And Payment</strong></h2>
+                    <p>Fill all form field to go to next step</p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Address</strong></li>
+                                    <li id="personal"><strong>Payment</strong></li>
+                                    <li id="payment"><strong>Verify</strong></li>
+                                    <li id="confirm"><strong>Finish</strong></li>
+                                </ul> <!-- fieldsets -->
+                                <fieldset >
+                                    <div class="row form-card">
+                                       	<div class="col-12">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="City">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="Address1">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="Address2">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="Zip">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="State">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="Street">
+                                       		<input type="text" class="rounded-0 bg-transparent border-right-0 border-left-0 border-top-0 border-warning text-warning" placeholder="Telephone number">
+                                       	</div>
+                                    </div> <input type="button" name="next" class="next action-button" value="Next Step">
+                                </fieldset>
+                                <fieldset class="">
+                                	 <div class="form-card ">
+                                        <h2 class="fs-title">Payment Information</h2>
+                                        <div class="radio-group">
+                                            <div class="radio" data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
+                                            <div class="radio" data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
+                                        </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="">
+                                        <div class="row">
+                                            <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder=""> </div>
+                                            <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***"> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
+                                            <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
+                                                    <option selected="">Month</option>
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+                                                    <option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+                                                    <option>November</option>
+                                                    <option>December</option>
+                                                </select> <select class="list-dt" id="year" name="expyear">
+                                                    <option selected="">Year</option>
+                                                    <option>2020</option>
+                                                     <option>2019</option>
+                                                      <option>2018</option>
+                                                      <option>2017</option>
+                                                       <option>2016</option>
+                                                     <option>2015</option>
+                                                      <option>2014</option>
+                                                       <option>2013</option>
+                                                        <option>2012</option>
+                                                         <option>2011</option>
+                                                          <option>2010</option>
+                                                </select> </div>
+                                        </div>
+                                    </div>
+                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous"> <input type="button" name="next" class="next action-button" value="Next Step">
+                                </fieldset>
+                                <fieldset class="">
+                                    <div class="form-card ">
+                                        <h2 class="fs-title">Payment Information</h2>
+                                        <div class="radio-group">
+                                            <div class="radio" data-value="credit"><img src="https://i.imgur.com/XzOzVHZ.jpg" width="200px" height="100px"></div>
+                                            <div class="radio" data-value="paypal"><img src="https://i.imgur.com/jXjwZlj.jpg" width="200px" height="100px"></div> <br>
+                                        </div> <label class="pay">Card Holder Name*</label> <input type="text" name="holdername" placeholder="">
+                                        <div class="row">
+                                            <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder=""> </div>
+                                            <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" placeholder="***"> </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3"> <label class="pay">Expiry Date*</label> </div>
+                                            <div class="col-9"> <select class="list-dt" id="month" name="expmonth">
+                                                    <option selected="">Month</option>
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+                                                    <option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+                                                    <option>November</option>
+                                                    <option>December</option>
+                                                </select> <select class="list-dt" id="year" name="expyear">
+                                                    <option selected="">Year</option>
+                                                    <option>2020</option>
+                                                     <option>2019</option>
+                                                      <option>2018</option>
+                                                      <option>2017</option>
+                                                       <option>2016</option>
+                                                     <option>2015</option>
+                                                      <option>2014</option>
+                                                       <option>2013</option>
+                                                        <option>2012</option>
+                                                         <option>2011</option>
+                                                          <option>2010</option>
+                                                </select> </div>
+                                        </div>
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous"> <input type="button" name="make_payment" class="next action-button" value="Confirm">
+                                </fieldset>
+                                <fieldset class="">
+                                    <div class="form-card ">
+                                        <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                        </div> <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5>You Have Successfully Signed Up</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    	</main>
+
+
+<div class="container main-footer">
+    <div class="row">
+        <div class="col-12 p-0">
+            <ul class="list-group list-group-horizontal-md w-100 justify-content-around text-uppercase font-weight-bold">
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Contact Us</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Live Chat</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Shipping</a></li>
+                <li class="border rounded-0 list-group-item flex-grow-1 text-center"><a class="stretched-link text-secondary" href="#">Term &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="d-none d-md-flex row justify-content-around">
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 3</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 4</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-auto flex-grow-1 p-0">
+            <ul class="list-group list-group-flush border">
+                <li class="list-group-item px-2 py-0 border-0 font-weight-bold text-uppercase text-secondary"><a class="stretched-link text-secondary" href="#">Link Group 5</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    1</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    2</a></li>
+                <li class="list-group-item px-2 py-0 border-0"><a class="stretched-link text-secondary" href="#">Link
+                    3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row align-items-center h-100 bg-dark">
+        <div class="col-auto flex-grow-0 py-3 d-none d-md-block text-danger">
+            <span>find us on: </span>
+        </div>
+        <div class="col-12 col-md-auto text-center mr-auto">
+            <a href=""><i class="fa fa-facebook text-danger mx-4"></i></a>
+         <a href=""><i class="fa fa-twitter text-danger mr-4"></i></a>
+         <a href=""><i class="fa fa-instagram text-danger mr-4"></i></a>
+         <a href=""><i class="fa fa-linkedin text-danger"></i></a>
+        </div>
+        <div class="col-12 col-md-auto text-center text-danger">
+            ©Tumo Center For Creative Technologies
+        </div>
+    </div>
+</div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!--  Fancybox JS  -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!--  custom JS  -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+</html>
